@@ -1,0 +1,125 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{float}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Boston House Price Prediction\\
+{\footnotesize}}
+
+\author{\IEEEauthorblockN{ Chang,Li-Ko }}
+\maketitle
+
+\begin{abstract}
+The problem that we are going to solve here is that given a set of features that describe a house in Boston, our machine learning model must predict the house price.
+
+\end{abstract}
+
+
+\begin{IEEEkeywords}
+Date preprocessing, Dropout, Xavier Initialization, n-layer MLP
+\end{IEEEkeywords}
+
+
+\section{Introduction}
+In this dataset, each row describes a Boston town or suburb. There are 506 rows and 13 attributes (features) with a target column (price).\\
+
+
+\section{Analysis process}
+We use 3-layer MLP to predict the Boston house prices.\\
+~\\
+The analysis process is as follows:\\
+1.Date preprocessing(Min-Max Normalization) \\
+2.Import data\\
+3.Feature selection(13 features) / (3 features)\\
+4.Dropout \\
+5.Xaiver initialization / normal initialization\\
+6.Feedforward \\
+7.Backpropagation\\
+8.Regularization\\
+9.Evaluate the models\\
+
+The following three models have common hyperparameters: l2=0., numbers of hidden layer=35,  epochs=100 , learning rate=0.001
+
+
+\\
+\section{Method}
+
+
+
+
+\subsection{Model1(13 features with Xaiver initialization)}
+
+\begin{figure}[htbp][H]
+\centerline{\includegraphics[height=2cm]{Image 278.png}}
+\caption{Model1 Analysis result one.}
+\label{fig1}
+\end{figure}
+
+
+
+\begin{figure}[htbp][H]
+\centerline{\includegraphics[height=2cm]{Image 281.png}}
+\caption{Model1 Analysis result two.}
+\label{fig1}
+\end{figure}
+
+
+
+\subsection{Model2(3 features with Xaiver initialization)}
+
+\begin{figure}[htbp][H]
+\centerline{\includegraphics[height=2cm]{Image 279.png}}
+\caption{Model2 Analysis result one.}
+\label{fig2}
+\end{figure}
+
+
+\begin{figure}[htbp][H]
+\centerline{\includegraphics[height=2cm]{Image 282.png}}
+\caption{Model2 Analysis result two.}
+\label{fig2}
+\end{figure}
+
+
+
+\subsection{Model3(13 features with normal
+initialization)}
+
+\begin{figure}[htbp][H]
+\centerline{\includegraphics[height=2cm]{Image 280.png}}
+\caption{Model3 Analysis result one.}
+\label{fig3}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp][H]
+\centerline{\includegraphics[height=2cm]{Image 283.png}}
+\caption{Model3 Analysis result two.}
+\label{fig3}
+\end{figure}
+
+
+
+
+\section{Analysis result}
+
+According three models result, We observe that the mean square error of model3(8 features with dropout) is  the smallest among the three models. Therefore, we can know that model3(8 features with dropout) is the best among them.
+
+
+
+
+
+\end{document}
+
+
